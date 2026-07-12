@@ -1,3 +1,7 @@
+output "system_center_virtual_machine_manager_clouds_id" {
+  description = "Map of id values across all system_center_virtual_machine_manager_clouds, keyed the same as var.system_center_virtual_machine_manager_clouds"
+  value       = { for k, v in azurerm_system_center_virtual_machine_manager_cloud.system_center_virtual_machine_manager_clouds : k => v.id }
+}
 output "system_center_virtual_machine_manager_clouds_custom_location_id" {
   description = "Map of custom_location_id values across all system_center_virtual_machine_manager_clouds, keyed the same as var.system_center_virtual_machine_manager_clouds"
   value       = { for k, v in azurerm_system_center_virtual_machine_manager_cloud.system_center_virtual_machine_manager_clouds : k => v.custom_location_id }
